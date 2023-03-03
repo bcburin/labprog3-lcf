@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.participants {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.participant {
+    width: 200px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.participant img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.participant h2 {
+    text-align: center;
+    margin: 10px;
+    color: #555;
+}
+
+h3.rank {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+h3.course {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    font-size: 12px;
+}
+  
+.hidden {
+    display: none;
+}
+
+.selected {
+    background-color: red;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+  
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+  
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+input[type="date"],
+input[type="text"],
+input[type="time"] {
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+button {
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #3e8e41;
+}

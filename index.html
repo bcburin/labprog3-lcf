@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conference</title>
+    <link rel="stylesheet" href="conference.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script defer src="conference.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Conference</h1>
+
+      <header>
+        <form>
+          <label for="date">Date:</label>
+          <input type="date" id="date" placeholder="Enter day" />
+          <label for="time">Time:</label>
+          <input type="time" id="time" placeholder="Enter time" />
+          <label for="location">Location:</label>
+          <input type="text" id="location" placeholder="Enter location" />
+          <label for="course">Course:</label>
+          <select id="course">
+            <option value="All">All</option>
+            <option value="CFG Reserva">CFG Reserva</option>
+            <option value="CFG Ativa">CFG Ativa</option>
+            <option value="CG">CG</option>
+          </select>
+          <button id="export-csv">Export CSV</button>
+        </form>
+      </header>
+
+      <div class="participants">
+        <div class="participant">
+          <img src="static/analivia.JPG" alt="Participant" />
+          <h2 class="name">Ana Lívia</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CGF Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/andrade.JPG" alt="Participant" />
+          <h2 class="name">Andrade</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/barbosa.JPG" alt="Participant" />
+          <h2 class="name">Barbosa</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CGF Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/bretherick.JPG" alt="Participant" />
+          <h2 class="name">Bretherick</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CGF Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/bronson.JPG" alt="Participant" />
+          <h2 class="name">Bronson</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CGF Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/burin.JPG" alt="Participant" />
+          <h2 class="name">Burin</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/cangussu.JPG" alt="Participant" />
+          <h2 class="name">Cangussú</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/caruso.JPG" alt="Participant" />
+          <h2 class="name">Caruso</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/cuadros.JPG" alt="Participant" />
+          <h2 class="name">Cuadros</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/damitz.JPG" alt="Participant" />
+          <h2 class="name">Damitz</h2>
+          <h3 class="rank">1º Ten</h3>
+          <h3 class="course">CG</h3>
+        </div>
+        <div class="participant">
+          <img src="static/danon.JPG" alt="Participant" />
+          <h2 class="name">Danon</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/feipesantos.JPG" alt="Participant" />
+          <h2 class="name">Felipe Santos</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/gomes.jpg" alt="Participant" />
+          <h2 class="name">Gomes</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/josephvieira.JPG" alt="Participant" />
+          <h2 class="name">Joseph Vieira</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/knoller.JPG" alt="Participant" />
+          <h2 class="name">Knöller</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/mateuslima.JPG" alt="Participant" />
+          <h2 class="name">Mateus Lima</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/nascimento.JPG" alt="Participant" />
+          <h2 class="name">Nascimento</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/nobrega.JPG" alt="Participant" />
+          <h2 class="name">Nóbrega</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/paixao.JPG" alt="Participant" />
+          <h2 class="name">Paixão</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/pamella.JPG" alt="Participant" />
+          <h2 class="name">Pamella</h2>
+          <h3 class="rank">Al Civ</h3>
+          <h3 class="course">CFG Reserva</h3>
+        </div>
+        <div class="participant">
+          <img src="static/pinafi.JPG" alt="Participant" />
+          <h2 class="name">Pinafi</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/pontes.JPG" alt="Participant" />
+          <h2 class="name">Pontes</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/queiroz.JPG" alt="Participant" />
+          <h2 class="name">Queiroz</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/richard.JPG" alt="Participant" />
+          <h2 class="name">Richard</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/timbo.JPG" alt="Participant" />
+          <h2 class="name">Timbó</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/vasconcelos.JPG" alt="Participant" />
+          <h2 class="name">Vasconcelos</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+        <div class="participant">
+          <img src="static/viegas.JPG" alt="Participant" />
+          <h2 class="name">Viegas</h2>
+          <h3 class="rank">Al Mil</h3>
+          <h3 class="course">CFG Ativa</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
